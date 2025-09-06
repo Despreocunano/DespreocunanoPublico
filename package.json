@@ -1,17 +1,27 @@
 {
-  "name": "lovio-rewrite",
-  "version": "1.0.0",
-  "description": "Rewrite service for app.lovio.cl to lovio.cl",
-  "main": "index.js",
+  "name": "tested-telescope",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "vercel dev",
-    "build": "echo 'No build step required'",
-    "start": "echo 'Static rewrite configuration'"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "keywords": ["rewrite", "vercel", "lovio"],
+  "dependencies": {
+    "astro": "^5.13.5"
+  },
+  "description": "```sh npm create astro@latest -- --template minimal ```",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Despreocunano/DespreocunanoPublico.git"
+  },
+  "keywords": [],
   "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "vercel": "^32.0.0"
-  }
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Despreocunano/DespreocunanoPublico/issues"
+  },
+  "homepage": "https://github.com/Despreocunano/DespreocunanoPublico#readme"
 }

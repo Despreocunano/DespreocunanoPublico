@@ -1,78 +1,43 @@
-# Lovio Rewrite Service
+# Astro Starter Kit: Minimal
 
-Este repositorio contiene la configuración para hacer rewrite de `app.lovio.cl/invitacion/slug` a `lovio.cl/invitacion/slug` usando Vercel.
-
-## Configuración
-
-### Archivos principales
-
-- `vercel.json`: Configuración de rewrites y headers de Vercel
-- `index.html`: Página de fallback en caso de que el rewrite no funcione
-- `package.json`: Configuración del proyecto Node.js
-
-### Rewrite Rules
-
-El archivo `vercel.json` contiene la regla de rewrite:
-
-```json
-{
-  "rewrites": [
-    {
-      "source": "/invitacion/:slug",
-      "destination": "https://lovio.cl/invitacion/:slug"
-    }
-  ]
-}
+```sh
+npm create astro@latest -- --template minimal
 ```
 
-Esto significa que:
-- `app.lovio.cl/invitacion/abc123` → `lovio.cl/invitacion/abc123`
-- `app.lovio.cl/invitacion/xyz789` → `lovio.cl/invitacion/xyz789`
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-## Deployment en Vercel
+## 🚀 Project Structure
 
-### Opción 1: Deploy automático desde GitHub
+Inside of your Astro project, you'll see the following folders and files:
 
-1. Conecta este repositorio a Vercel
-2. Vercel detectará automáticamente la configuración en `vercel.json`
-3. El dominio `app.lovio.cl` debe estar configurado en tu cuenta de Vercel
-
-### Opción 2: Deploy manual
-
-```bash
-# Instalar Vercel CLI
-npm install -g vercel
-
-# Deploy
-vercel
-
-# Configurar dominio personalizado
-vercel domains add app.lovio.cl
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
 ```
 
-## Configuración de Dominio
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-1. En tu panel de Vercel, ve a Settings > Domains
-2. Agrega `app.lovio.cl` como dominio personalizado
-3. Configura los DNS records según las instrucciones de Vercel
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-## Testing
+Any static assets, like images, can be placed in the `public/` directory.
 
-Para probar localmente:
+## 🧞 Commands
 
-```bash
-npm install
-vercel dev
-```
+All commands are run from the root of the project, from a terminal:
 
-Luego visita `http://localhost:3000/invitacion/test-slug` para verificar que el rewrite funciona.
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## Fallback
+## 👀 Want to learn more?
 
-Si por alguna razón el rewrite no funciona, el `index.html` incluye un script de JavaScript que redirigirá automáticamente al usuario después de 2 segundos.
-
-## Headers de Seguridad
-
-Se incluyen headers básicos de seguridad:
-- `X-Frame-Options: DENY`
-- `X-Content-Type-Options: nosniff`
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
