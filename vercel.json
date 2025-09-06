@@ -11,8 +11,58 @@
   ],
   "redirects": [
     {
-      "source": "/((?!invitacion/|regalos/).*)",
-      "destination": "https://app.lovio.cl/$1",
+      "source": "/dashboard",
+      "destination": "https://app.lovio.cl/dashboard",
+      "permanent": false
+    },
+    {
+      "source": "/auth",
+      "destination": "https://app.lovio.cl/auth",
+      "permanent": false
+    },
+    {
+      "source": "/settings",
+      "destination": "https://app.lovio.cl/settings",
+      "permanent": false
+    },
+    {
+      "source": "/guests",
+      "destination": "https://app.lovio.cl/guests",
+      "permanent": false
+    },
+    {
+      "source": "/tables",
+      "destination": "https://app.lovio.cl/tables",
+      "permanent": false
+    },
+    {
+      "source": "/gift-list",
+      "destination": "https://app.lovio.cl/gift-list",
+      "permanent": false
+    },
+    {
+      "source": "/gifts-received",
+      "destination": "https://app.lovio.cl/gifts-received",
+      "permanent": false
+    },
+    {
+      "source": "/reminders",
+      "destination": "https://app.lovio.cl/reminders",
+      "permanent": false
+    },
+    {
+      "source": "/wedding-wizard",
+      "destination": "https://app.lovio.cl/wedding-wizard",
+      "permanent": false
+    },
+    {
+      "source": "/preview",
+      "destination": "https://app.lovio.cl/preview",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "destination": "https://app.lovio.cl/",
       "permanent": false
     }
   ]
