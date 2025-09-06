@@ -1,5 +1,9 @@
+
 {
   "rewrites": [
-    { "source": "/invitacion/:slug", "destination": "https://app.lovio.cl/invitacion/:slug" }
+    {
+      "source": "/invitacion/(.*)",
+      "destination": "https://app.lovio.cl/invitacion/:$1"
+    }
   ]
 }
