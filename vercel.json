@@ -1,32 +1,19 @@
 {
-  "buildCommand": "echo 'No build step required'",
-  "outputDirectory": ".",
-  "redirects": [
-    {
-      "source": "/invitacion/:slug",
-      "destination": "https://lovio.cl/invitacion/:slug",
-      "permanent": false
-    }
-  ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/invitacion/:slug",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/regalos/:slug",
       "destination": "/index.html"
     }
   ],
-  "headers": [
+  "redirects": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        }
-      ]
+      "source": "/((?!invitacion/|regalos/).*)",
+      "destination": "https://app.lovio.cl/$1",
+      "permanent": false
     }
   ]
 }
