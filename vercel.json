@@ -6,6 +6,10 @@
     {
       "source": "/invitacion/:slug",
       "destination": "https://app.lovio.cl/invitacion/:slug"
+    },
+    {
+      "source": "/:file*",
+      "destination": "https://app.lovio.cl/:file*"
     }
   ]
 }
