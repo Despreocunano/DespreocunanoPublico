@@ -5,7 +5,7 @@
   "rewrites": [
     {
       "source": "/invitacion/(.*)",
-      "destination": "https://app.lovio.cl/invitacion/:$1"
+      "destination": "https://app.lovio.cl/invitacion/$1"
     },
     {
       "source": "/(.*\\.(css|js|svg|png|jpg|jpeg|gif|ico|woff|woff2|ttf|eot))",
