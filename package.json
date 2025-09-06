@@ -1,0 +1,17 @@
+{
+  "name": "lovio-rewrite",
+  "version": "1.0.0",
+  "description": "Rewrite service for app.lovio.cl to lovio.cl",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required'",
+    "start": "echo 'Static rewrite configuration'"
+  },
+  "keywords": ["rewrite", "vercel", "lovio"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+}
