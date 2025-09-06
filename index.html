@@ -59,20 +59,10 @@
     </div>
     
     <script>
-        // Redirigir a lovio.cl manteniendo la URL original
-        (function() {
-            const path = window.location.pathname;
-            const search = window.location.search;
-            const hash = window.location.hash;
-            
-            // Construir la URL completa de destino
-            let targetUrl = 'https://lovio.cl' + path;
-            if (search) targetUrl += search;
-            if (hash) targetUrl += hash;
-            
-            // Redirigir inmediatamente
-            window.location.replace(targetUrl);
-        })();
+        // Página de fallback - redirigir a lovio.cl
+        setTimeout(() => {
+            window.location.href = 'https://lovio.cl';
+        }, 2000);
     </script>
 </body>
 </html>
