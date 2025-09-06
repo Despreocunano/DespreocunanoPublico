@@ -1,11 +1,14 @@
 {
   "buildCommand": "echo 'No build step required'",
   "outputDirectory": ".",
-  "redirects": [
+  "rewrites": [
     {
       "source": "/invitacion/:slug",
-      "destination": "https://lovio.cl/invitacion/:slug",
-      "permanent": false
+      "destination": "https://lovio.cl/invitacion/:slug"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
   "headers": [
