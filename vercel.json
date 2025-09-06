@@ -8,6 +8,10 @@
       "destination": "https://app.lovio.cl/invitacion/:slug"
     },
     {
+      "source": "/regalos/:slug",
+      "destination": "https://app.lovio.cl/regalos/:slug"
+    },
+    {
       "source": "/:file*",
       "destination": "https://app.lovio.cl/:file*"
     }
