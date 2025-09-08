@@ -9,7 +9,10 @@ import {
     Gift, 
     Calendar, 
     Camera, 
-    CheckCircle 
+    CheckCircle,
+    Bell,
+    Crown,
+    Sparkles 
 } from 'lucide-astro';
 
 const features = [
@@ -57,29 +60,42 @@ const features = [
         icon: CheckCircle,
         title: "Lista de asistentes (RSVP)",
         description: "Tus invitados podrán confirmar su presencia para ayudarte en la lista de invitados final"
+    },
+    {
+        icon: Bell,
+        title: "Recordatorios",
+        description: "Programa avisos automáticos para que nadie se olvide del gran día"
+    },
+    {
+        icon: Crown,
+        title: "Acceso VIP",
+        description: "Secciones exclusivas para familiares y amigos cercanos"
+    },
+    {
+        icon: Sparkles,
+        title: "¡Mucho más!",
+        description: "Suma encuestas, galería colaborativa, códigos QR, y otras sorpresas"
     }
 ];
 ---
 
-<section class="py-24 bg-gray-50">
+<section class="py-24 bg-white">
     <div class="max-w-7xl mx-auto px-5">
-        <div class="text-center mb-20">
-            <h2 class="text-5xl font-bold text-gray-800 mb-5">¿Qué incluyen?</h2>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">La magia de las invitaciones digitales</p>
+        <div class="text-center mb-16">
+            <h2 class="font-serif text-5xl text-gray-900 mb-4">¿Qué incluyen?</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">La magia de las invitaciones digitales</p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature) => {
                 const IconComponent = feature.icon;
                 return (
-                    <div class="bg-white p-10 rounded-2xl shadow-xl text-center relative overflow-hidden group hover:-translate-y-2 transition-all duration-300">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-lovio-600"></div>
-                        
-                        <div class="flex justify-center mb-5">
-                            <IconComponent size="48" class="text-primary" />
+                    <div class="relative rounded-3xl border border-rose-200 bg-rose-50 p-8 shadow-sm hover:shadow-md transition">
+                        <div class="absolute -top-4 left-6 bg-white ring-1 ring-rose-200 rounded-full p-3 shadow">
+                            <IconComponent size="28" class="text-lovio-500" />
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">{feature.title}</h3>
-                        <p class="text-gray-600 leading-relaxed">{feature.description}</p>
+                        <h3 class="mt-4 font-serif text-2xl text-gray-900 mb-3">{feature.title}</h3>
+                        <p class="text-gray-700 leading-relaxed">{feature.description}</p>
                     </div>
                 );
             })}

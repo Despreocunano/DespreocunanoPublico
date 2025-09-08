@@ -5,10 +5,10 @@ import { User, ChevronDown } from 'lucide-astro';
 
 <header class="bg-white shadow-lg fixed top-0 left-0 right-0 z-50">
     <div class="max-w-7xl mx-auto px-5">
-        <div class="flex items-center justify-between py-4 lg:flex-nowrap flex-wrap gap-4">
-            <div class="logo">
+        <div class="flex items-center justify-between py-4">
+            <a href="/" class="logo inline-flex items-center">
                 <img src="/lovio.svg" alt="Lovio" class="h-8 w-auto" />
-            </div>
+            </a>
             
             <nav class="hidden lg:flex gap-8 items-center">
                 <a href="#ejemplos" class="text-gray-800 font-medium text-sm hover:text-secondary transition-colors">Ejemplos</a>
@@ -17,21 +17,63 @@ import { User, ChevronDown } from 'lucide-astro';
                 <a href="#faq" class="text-gray-800 font-medium text-sm hover:text-secondary transition-colors">Preguntas Frecuentes</a>
             </nav>
             
-            <div class="flex items-center gap-4 flex-wrap">
-                <button class="bg-primary text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-lovio-600 transition-colors">
-                    Crear Invitación
+            <div class="flex items-center gap-4">
+                <!-- Mobile hamburger on the right -->
+                <button id="menu-toggle" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 hover:border-primary text-gray-700">
+                    <span class="sr-only">Abrir menú</span>
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 </button>
-                <button class="bg-white text-primary border border-primary px-5 py-2.5 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-colors flex items-center gap-2">
-                    <User size="16" />
-                    Ingresar
-                </button>
-                
-                <div class="flex items-center gap-2 px-3 py-2 bg-white border border-gray-300 rounded-full cursor-pointer hover:border-primary transition-colors">
-                    <img src="https://flagcdn.com/w20/cl.png" alt="Chile" class="w-5 h-3 object-cover rounded-sm" />
-                    <span class="text-sm text-gray-800 font-medium">Chile</span>
-                    <ChevronDown size="12" class="text-gray-600" />
+
+                <!-- Desktop actions -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <button class="bg-primary text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-lovio-600 transition-colors">
+                        Crear Invitación
+                    </button>
+                    <button class="bg-white text-primary border border-primary px-5 py-2.5 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-colors flex items-center gap-2">
+                        <User size="16" />
+                        Ingresar
+                    </button>
+                    
+                    <div class="flex items-center gap-2 px-3 py-2 bg-white border border-gray-300 rounded-full cursor-pointer hover:border-primary transition-colors">
+                        <img src="https://flagcdn.com/w20/cl.png" alt="Chile" class="w-5 h-3 object-cover rounded-sm" />
+                        <span class="text-sm text-gray-800 font-medium">Chile</span>
+                        <ChevronDown size="12" class="text-gray-600" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-200 pb-4">
+            <div class="pt-3 grid gap-3">
+                <a href="#ejemplos" class="px-2 py-2 rounded-lg text-gray-800 hover:bg-rose-50">Ejemplos</a>
+                <a href="#como-crear" class="px-2 py-2 rounded-lg text-gray-800 hover:bg-rose-50">¿Cómo crear mi invitación?</a>
+                <a href="#precios" class="px-2 py-2 rounded-lg text-gray-800 hover:bg-rose-50">Nuestros Precios</a>
+                <a href="#faq" class="px-2 py-2 rounded-lg text-gray-800 hover:bg-rose-50">Preguntas Frecuentes</a>
+                <div class="flex items-center gap-3 pt-2">
+                    <button class="flex-1 bg-primary text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-lovio-600 transition-colors">Crear Invitación</button>
+                    <button class="flex-1 bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-colors flex items-center justify-center gap-2">
+                        <User size="16" />
+                        Ingresar
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </header>
+
+<script>
+    const btn = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('menu-icon');
+
+    if (btn && menu && icon) {
+        btn.addEventListener('click', () => {
+            const isOpen = !menu.classList.contains('hidden');
+            menu.classList.toggle('hidden');
+            icon.innerHTML = isOpen
+                ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>'
+                : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>'
+        });
+    }
+</script>
