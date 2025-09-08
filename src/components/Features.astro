@@ -1,0 +1,88 @@
+---
+// Componente Features
+import { 
+    Smartphone, 
+    Music, 
+    Clock, 
+    MapPin, 
+    Music4, 
+    Gift, 
+    Calendar, 
+    Camera, 
+    CheckCircle 
+} from 'lucide-astro';
+
+const features = [
+    {
+        icon: Smartphone,
+        title: "Envío ilimitado",
+        description: "A través de WhatsApp, Correo Electrónico, Redes Sociales y cualquier plataforma digital"
+    },
+    {
+        icon: Music,
+        title: "Música de fondo",
+        description: "El tema musical que desees sonará de fondo en tu invitación"
+    },
+    {
+        icon: Clock,
+        title: "Cuenta Regresiva",
+        description: "Emocionante cuenta regresiva en tiempo real directo a la fecha de tu evento"
+    },
+    {
+        icon: MapPin,
+        title: "Ubicación e Indicaciones",
+        description: "Mapa interactivo con la ubicación del evento, tus invitados llegarán sin complicaciones"
+    },
+    {
+        icon: Music4,
+        title: "Lista de canciones",
+        description: "Tus invitados podrán crear la lista de canciones que no pueden faltar en tu fiesta"
+    },
+    {
+        icon: Gift,
+        title: "Regalos",
+        description: "Tus invitados tendrán la posibilidad de hacerte llegar sus regalos"
+    },
+    {
+        icon: Calendar,
+        title: "Agenda",
+        description: "Tus invitados podrán agendar tu evento con un solo clic en sus agendas"
+    },
+    {
+        icon: Camera,
+        title: "Álbum de fotos",
+        description: "Una historia única en un hermoso recorrido fotográfico"
+    },
+    {
+        icon: CheckCircle,
+        title: "Lista de asistentes (RSVP)",
+        description: "Tus invitados podrán confirmar su presencia para ayudarte en la lista de invitados final"
+    }
+];
+---
+
+<section class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-5">
+        <div class="text-center mb-20">
+            <h2 class="text-5xl font-bold text-gray-800 mb-5">¿Qué incluyen?</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">La magia de las invitaciones digitales</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {features.map((feature) => {
+                const IconComponent = feature.icon;
+                return (
+                    <div class="bg-white p-10 rounded-2xl shadow-xl text-center relative overflow-hidden group hover:-translate-y-2 transition-all duration-300">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-lovio-600"></div>
+                        
+                        <div class="flex justify-center mb-5">
+                            <IconComponent size="48" class="text-primary" />
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">{feature.title}</h3>
+                        <p class="text-gray-600 leading-relaxed">{feature.description}</p>
+                    </div>
+                );
+            })}
+        </div>
+    </div>
+</section>

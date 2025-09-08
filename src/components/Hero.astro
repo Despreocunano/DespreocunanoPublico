@@ -1,0 +1,38 @@
+---
+// Componente Hero
+import { ChevronDown } from 'lucide-astro';
+---
+
+<section class="bg-gradient-to-br from-secondary to-accent text-white relative overflow-hidden min-h-screen flex items-center">
+    <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0); background-size: 20px 20px;"></div>
+    
+    <div class="max-w-4xl mx-auto px-5 text-center relative z-10">
+        <div class="inline-block bg-white/20 text-white px-5 py-2 rounded-full text-sm font-semibold mb-8 backdrop-blur-sm">
+            Lovio
+        </div>
+        
+        <h1 class="text-6xl font-bold mb-5 leading-tight">
+            Invitaciones digitales para tu matrimonio
+        </h1>
+        
+        <p class="text-2xl mb-12 text-white/90 font-light max-w-2xl mx-auto">
+            Interactivas, funcionales y originales
+        </p>
+        
+        <div class="flex gap-5 justify-center flex-wrap mb-16">
+            <button class="bg-white text-primary px-8 py-4 rounded-full text-base font-semibold uppercase tracking-wide shadow-2xl hover:bg-gray-50 hover:-translate-y-1 transition-all duration-300">
+                ¡Adquiere tu invitación hoy!
+            </button>
+            <button class="bg-transparent text-white border-2 border-white px-8 py-4 rounded-full text-base font-semibold uppercase tracking-wide hover:bg-white hover:text-primary transition-all duration-300">
+                Ver Modelos
+            </button>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center text-white/70 text-sm">
+            <span>Scrolleá!</span>
+            <div class="animate-bounce mt-2">
+                <ChevronDown size="24" />
+            </div>
+        </div>
+    </div>
+</section>
