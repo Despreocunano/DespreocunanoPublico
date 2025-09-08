@@ -132,17 +132,20 @@ import { UserPlus, FileText, Eye, Share2 } from 'lucide-astro';
     </div>
 
     <script>
+        /** @type {NodeListOf<HTMLButtonElement>} */
         const tabs = document.querySelectorAll('#how-tabs .tab-btn');
+        /** @type {NodeListOf<HTMLDivElement>} */
         const panels = document.querySelectorAll('#how-panels .tab-panel');
         let active = 0;
-        function setActive(i){
+        /** @param {number} i */
+        const setActive = (i) => {
             active = i;
-            tabs.forEach((t,idx)=>{
-                t.classList.toggle('border-lovio-500', idx===i);
-                t.classList.toggle('bg-rose-50', idx===i);
+            tabs.forEach((t, idx) => {
+                t.classList.toggle('border-lovio-500', idx === i);
+                t.classList.toggle('bg-rose-50', idx === i);
             });
-            panels.forEach((p,idx)=>{
-                if(idx===i){
+            panels.forEach((p, idx) => {
+                if (idx === i) {
                     p.classList.remove('hidden');
                     p.classList.add('animate-fadeIn');
                 } else {
@@ -151,7 +154,7 @@ import { UserPlus, FileText, Eye, Share2 } from 'lucide-astro';
                 }
             });
         }
-        tabs.forEach((t,idx)=>t.addEventListener('click',()=>setActive(idx)));
+        tabs.forEach((t, idx) => t.addEventListener('click', () => setActive(idx)));
         setActive(0);
     </script>
 
