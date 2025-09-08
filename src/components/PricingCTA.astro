@@ -1,0 +1,59 @@
+---
+// Componente PricingCTA
+import { Heart, Sparkles, Eye, Palette, Smartphone, Shield } from 'lucide-astro';
+---
+
+<section class="bg-gradient-to-br from-rose-50 to-pink-100 py-20">
+    <div class="max-w-4xl mx-auto px-5 text-center">
+        <div class="mb-8">
+            <h2 class="font-serif text-4xl lg:text-5xl text-gray-900 mb-4">
+                Tu invitación perfecta por solo
+            </h2>
+            <div class="flex items-center justify-center gap-2 mb-6">
+                <span class="text-6xl lg:text-7xl font-bold text-lovio-500">$39.990</span>
+            </div>
+            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                Pago único • Sin suscripciones • Acceso de por vida • Soporte 24/7
+            </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <button class="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold shadow-xl hover:bg-lovio-600 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-2">
+                <Sparkles size="20" />
+                Crear mi invitación ahora
+            </button>
+            <button class="bg-white text-primary border-2 border-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300 flex items-center gap-2">
+                <Eye size="20" />
+                Ver ejemplos
+            </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-sm">
+                <div class="flex justify-center mb-3">
+                    <Palette size="32" class="text-lovio-500" />
+                </div>
+                <h3 class="font-semibold text-gray-900 mb-2">20+ Diseños</h3>
+                <p class="text-sm text-gray-600">Templates únicos y personalizables</p>
+            </div>
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-sm">
+                <div class="flex justify-center mb-3">
+                    <Smartphone size="32" class="text-lovio-500" />
+                </div>
+                <h3 class="font-semibold text-gray-900 mb-2">Envío ilimitado</h3>
+                <p class="text-sm text-gray-600">WhatsApp, email, redes sociales</p>
+            </div>
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-sm">
+                <div class="flex justify-center mb-3">
+                    <Shield size="32" class="text-lovio-500" />
+                </div>
+                <h3 class="font-semibold text-gray-900 mb-2">Pago seguro</h3>
+                <p class="text-sm text-gray-600">Crédito y débito</p>
+            </div>
+        </div>
+
+        <div class="mt-8 text-sm text-gray-500">
+            <p>Garantía de satisfacción 30 días • Sin compromisos • Cancelación en cualquier momento</p>
+        </div>
+    </div>
+</section>
