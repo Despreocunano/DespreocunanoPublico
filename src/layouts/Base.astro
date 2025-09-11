@@ -1,0 +1,33 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'Lovio', description = 'Gestión de tu boda: invitación digital, RSVP, mesas, música y más.' } = Astro.props as Props;
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <link rel="icon" type="image/svg+xml" href="/icono.svg" />
+    <link rel="icon" type="image/x-icon" href="/icono.svg" />
+    <link rel="shortcut icon" href="/icono.svg" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-62Q6NTVSCC"></script>
+    <script is:inline>
+      // @ts-nocheck
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-62Q6NTVSCC');
+    </script>
+</head>
+<body class="bg-gray-50">
+    <slot />
+</body>
+</html>

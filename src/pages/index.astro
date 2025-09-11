@@ -1,4 +1,5 @@
 ---
+import BaseLayout from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Features from '../components/Features.astro';
@@ -7,19 +8,7 @@ import PricingCTA from '../components/PricingCTA.astro';
 import HowItWorks from '../components/HowItWorks.astro';
 import Footer from '../components/Footer.astro';
 ---
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lovio - Gestión de tu boda</title>
-    <meta name="description" content="Desde la invitación digital hasta la organización de mesas, RSVP, música y mucho más. Todo para que tu boda sea perfecta.">
-    <link rel="icon" type="image/svg+xml" href="/icono.svg" />
-    <link rel="icon" type="image/x-icon" href="/icono.svg" />
-    <link rel="shortcut icon" href="/icono.svg" />
-</head>
-<body class="bg-gray-50">
+<BaseLayout title="Lovio - Gestión de tu boda" description="Desde la invitación digital hasta la organización de mesas, RSVP, música y mucho más. Todo para que tu boda sea perfecta.">
     <Header />
     
     <main class="pt-20">
@@ -30,6 +19,6 @@ import Footer from '../components/Footer.astro';
         <Features />
     </main>
 
+    <!-- Footer -->
     <Footer />
-</body>
-</html>
+</BaseLayout>
