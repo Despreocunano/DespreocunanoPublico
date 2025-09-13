@@ -27,13 +27,13 @@ import { User, ChevronDown } from 'lucide-astro';
 
                 <!-- Desktop actions -->
                 <div class="hidden lg:flex items-center gap-4">
-                    <button class="bg-primary text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-lovio-600 transition-colors">
+                    <a href="https://app.lovio.cl/auth?mode=register" class="bg-primary text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-lovio-600 transition-colors">
                         Crear Invitación
-                    </button>
-                    <button class="bg-white text-primary border border-primary px-5 py-2.5 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-colors flex items-center gap-2">
+                    </a>
+                    <a href="https://app.lovio.cl/auth" class="bg-white text-primary border border-primary px-5 py-2.5 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-colors flex items-center gap-2">
                         <User size="16" />
                         Ingresar
-                    </button>
+                    </a>
                     
                     <div class="flex items-center gap-2 px-3 py-2 bg-white border border-gray-300 rounded-full cursor-pointer hover:border-primary transition-colors">
                         <img src="https://flagcdn.com/w20/cl.png" alt="Chile" class="w-5 h-3 object-cover rounded-sm" />
@@ -53,11 +53,11 @@ import { User, ChevronDown } from 'lucide-astro';
                 <a href="#precios" class="px-2 py-2 rounded-lg text-gray-800 hover:text-lovio-600 hover:bg-rose-50 transition">Nuestros Precios</a>
                 <a href="#faq" class="px-2 py-2 rounded-lg text-gray-800 hover:text-lovio-600 hover:bg-rose-50 transition">Preguntas Frecuentes</a>
                 <div class="flex items-center gap-3 pt-2">
-                    <button class="flex-1 bg-primary text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-lovio-600 transition-colors">Crear Invitación</button>
-                    <button class="flex-1 bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-colors flex items-center justify-center gap-2">
+                    <a href="https://app.lovio.cl/auth?mode=register" class="flex-1 bg-primary text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-lovio-600 transition-colors text-center">Crear Invitación</a>
+                    <a href="https://app.lovio.cl/auth" class="flex-1 bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-colors flex items-center justify-center gap-2">
                         <User size="16" />
                         Ingresar
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
