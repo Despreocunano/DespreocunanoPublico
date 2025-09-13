@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+// Datos de los diseños
+const diseños = [
+  {
+    id: 'clasico-elegante',
+    nombre: 'Clásico Elegante',
+    descripcion: 'Diseño tradicional con toques modernos',
+    descripcionLarga: 'Perfecto para bodas tradicionales con un toque contemporáneo',
+    slug: 'clasico-elegante-001', // Slug exacto de la app
+    preview: '/previews/clasico-elegante.jpg', // Imagen de preview
+    categoria: 'Clásicos',
+    emoji: '💍',
+    gradiente: 'from-rose-100 to-pink-200'
+  },
+  {
+    id: 'moderno-minimalista',
+    nombre: 'Moderno Minimalista',
+    descripcion: 'Líneas limpias y elegantes',
+    descripcionLarga: 'Ideal para parejas que aman el diseño contemporáneo',
+    slug: 'moderno-minimalista-002',
+    preview: '/previews/moderno-minimalista.jpg',
+    categoria: 'Modernos',
+    emoji: '✨',
+    gradiente: 'from-blue-100 to-indigo-200'
+  },
+  {
+    id: 'rustico-natural',
+    nombre: 'Rustico Natural',
+    descripcion: 'Inspirado en la naturaleza',
+    descripcionLarga: 'Perfecto para bodas al aire libre y temática natural',
+    slug: 'rustico-natural-003',
+    preview: '/previews/rustico-natural.jpg',
+    categoria: 'Rusticos',
+    emoji: '🌿',
+    gradiente: 'from-green-100 to-emerald-200'
+  },
+  {
+    id: 'lujo-dorado',
+    nombre: 'Lujo Dorado',
+    descripcion: 'Elegancia y sofisticación',
+    descripcionLarga: 'Para bodas de gala y celebraciones especiales',
+    slug: 'lujo-dorado-004',
+    preview: '/previews/lujo-dorado.jpg',
+    categoria: 'Elegantes',
+    emoji: '👑',
+    gradiente: 'from-purple-100 to-violet-200'
+  },
+  {
+    id: 'romantico-vintage',
+    nombre: 'Romántico Vintage',
+    descripcion: 'Estilo retro con encanto',
+    descripcionLarga: 'Para parejas que aman el estilo clásico y romántico',
+    slug: 'romantico-vintage-005',
+    preview: '/previews/romantico-vintage.jpg',
+    categoria: 'Vintage',
+    emoji: '🌹',
+    gradiente: 'from-orange-100 to-red-200'
+  },
+  {
+    id: 'marino-azul',
+    nombre: 'Marino Azul',
+    descripcion: 'Inspirado en el océano',
+    descripcionLarga: 'Ideal para bodas en la playa o con temática marina',
+    slug: 'marino-azul-006',
+    preview: '/previews/marino-azul.jpg',
+    categoria: 'Marinos',
+    emoji: '🌊',
+    gradiente: 'from-cyan-100 to-blue-200'
+  }
+];
+
+// Categorías únicas para los filtros
+const categorias = [...new Set(diseños.map(d => d.categoria))];
+---
+
+<BaseLayout title="Diseños de Invitaciones - Lovio" description="Explora nuestra colección de hermosos diseños de invitaciones de boda. Encuentra el estilo perfecto para tu gran día.">
+    <Header />
+    
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-rose-50 to-pink-100 py-16">
+            <div class="max-w-7xl mx-auto px-5 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Diseños de Invitaciones
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Descubre nuestra colección de plantillas exclusivas y encuentra el diseño perfecto para tu boda
+                </p>
+            </div>
+        </section>
+
+        <!-- Filtros -->
+        <section class="py-8 bg-white border-b">
+            <div class="max-w-7xl mx-auto px-5">
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <button class="px-6 py-2 bg-lovio-500 text-white rounded-full font-medium hover:bg-lovio-600 transition-colors">
+                        Todos
+                    </button>
+                    {categorias.map(categoria => (
+                        <button class="px-6 py-2 bg-gray-100 text-gray-700 rounded-full font-medium hover:bg-gray-200 transition-colors">
+                            {categoria}
+                        </button>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid de Diseños -->
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-5">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    {diseños.map(diseño => (
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                            <div class={`aspect-[3/4] bg-gradient-to-br ${diseño.gradiente} relative overflow-hidden`}>
+                                <!-- Si hay imagen de preview, la mostramos, sino el placeholder con emoji -->
+                                {diseño.preview ? (
+                                    <img 
+                                        src={diseño.preview} 
+                                        alt={diseño.nombre}
+                                        class="w-full h-full object-cover"
+                                        loading="lazy"
+                                    />
+                                ) : (
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="text-center p-6">
+                                            <div class="w-16 h-16 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
+                                                <span class="text-2xl">{diseño.emoji}</span>
+                                            </div>
+                                            <h3 class="text-lg font-semibold text-gray-800 mb-2">{diseño.nombre}</h3>
+                                            <p class="text-sm text-gray-600">{diseño.descripcion}</p>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-semibold text-gray-900 mb-2">{diseño.nombre}</h3>
+                                <p class="text-sm text-gray-600 mb-4">{diseño.descripcionLarga}</p>
+                                <a href={`/disenos/${diseño.slug}`} class="inline-flex items-center text-lovio-500 font-medium hover:text-lovio-600 transition-colors">
+                                    Ver diseño →
+                                </a>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <!-- CTA Section -->
+                <div class="text-center mt-16">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                        ¿No encuentras lo que buscas?
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Crea tu diseño personalizado con nuestra herramienta de diseño
+                    </p>
+                    <a href="/" class="inline-flex items-center bg-lovio-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-lovio-600 transition-colors">
+                        Crear Mi Invitación
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+</BaseLayout>

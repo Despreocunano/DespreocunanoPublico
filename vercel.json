@@ -12,16 +12,8 @@
       "destination": "https://app.lovio.cl/regalos/:slug"
     },
     {
-      "source": "/disenos",
-      "destination": "https://app.lovio.cl/disenos"
-    },
-    {
-      "source": "/disenos/:slug",
-      "destination": "https://app.lovio.cl/disenos/:slug"
-    },
-    {
       "source": "/diseno/:templateId",
-      "destination": "https://app.lovio.cl/diseno/:templateId"
+      "destination": "https://app.lovio.cl/disenos/:templateId"
     },
     {
       "source": "/assets/:file*",
