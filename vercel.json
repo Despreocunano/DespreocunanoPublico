@@ -12,6 +12,10 @@
       "destination": "https://app.lovio.cl/regalos/:slug"
     },
     {
+      "source": "/disenos/:slug",
+      "destination": "https://app.lovio.cl/disenos/:slug"
+    },
+    {
       "source": "/assets/:file*",
       "destination": "https://app.lovio.cl/assets/:file*"
     },
