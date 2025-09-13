@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Página no encontrada - Lovio" description="La página que buscas no existe. Regresa al inicio y encuentra el diseño perfecto para tu boda.">
+    <Header />
+    
+    <main class="pt-20 min-h-screen flex items-center">
+        <div class="max-w-4xl mx-auto px-5 text-center">
+            <!-- Ilustración 404 -->
+            <div class="mb-12">
+                <div class="relative">
+                    <!-- Número 404 grande -->
+                    <h1 class="text-9xl md:text-[12rem] font-bold text-lovio-100 select-none">
+                        404
+                    </h1>
+                    
+                    <!-- Elementos decorativos -->
+                    <div class="absolute top-8 right-8 w-16 h-16 bg-lovio-200 rounded-full animate-bounce"></div>
+                    <div class="absolute bottom-8 left-8 w-12 h-12 bg-rose-200 rounded-full animate-pulse"></div>
+                    <div class="absolute top-1/2 left-1/4 w-8 h-8 bg-pink-200 rounded-full animate-ping"></div>
+                    <div class="absolute top-1/3 right-1/4 w-6 h-6 bg-rose-300 rounded-full animate-bounce delay-1000"></div>
+                </div>
+            </div>
+
+            <!-- Contenido principal -->
+            <div class="space-y-6 mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
+                    ¡Ups! Página no encontrada
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    La página que buscas no existe o ha sido movida. 
+                    Pero no te preocupes, podemos ayudarte a encontrar lo que necesitas.
+                </p>
+            </div>
+
+            <!-- Botones de acción -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a 
+                    href="/" 
+                    class="inline-flex items-center bg-lovio-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-lovio-600 transition-colors"
+                >
+                    Ir al inicio
+                </a>
+                <a 
+                    href="/disenos" 
+                    class="inline-flex items-center bg-white text-lovio-500 border-2 border-lovio-500 px-8 py-4 rounded-full font-semibold text-lg hover:bg-lovio-50 transition-colors"
+                >
+                    Ver diseños
+                </a>
+            </div>
+
+            <!-- Enlaces útiles -->
+            <div class="bg-gray-50 rounded-2xl p-8">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+                    Enlaces útiles
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <a href="/disenos" class="flex items-center gap-3 p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-lovio-100 rounded-lg flex items-center justify-center">
+                            <div class="w-4 h-4 bg-lovio-500 rounded"></div>
+                        </div>
+                        <div class="text-left">
+                            <div class="font-medium text-gray-900">Diseños</div>
+                            <div class="text-sm text-gray-600">Ver plantillas</div>
+                        </div>
+                    </a>
+                    
+                    <a href="/#ejemplos" class="flex items-center gap-3 p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <div class="w-4 h-4 bg-blue-500 rounded"></div>
+                        </div>
+                        <div class="text-left">
+                            <div class="font-medium text-gray-900">Ejemplos</div>
+                            <div class="text-sm text-gray-600">Ver casos de uso</div>
+                        </div>
+                    </a>
+                    
+                    <a href="/#precios" class="flex items-center gap-3 p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                            <div class="w-4 h-4 bg-green-500 rounded"></div>
+                        </div>
+                        <div class="text-left">
+                            <div class="font-medium text-gray-900">Precios</div>
+                            <div class="text-sm text-gray-600">Ver planes</div>
+                        </div>
+                    </a>
+                    
+                    <a href="/#faq" class="flex items-center gap-3 p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                            <div class="w-4 h-4 bg-purple-500 rounded"></div>
+                        </div>
+                        <div class="text-left">
+                            <div class="font-medium text-gray-900">FAQ</div>
+                            <div class="text-sm text-gray-600">Preguntas frecuentes</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mensaje de ayuda -->
+            <div class="mt-12 p-6 bg-lovio-50 rounded-xl">
+                <p class="text-gray-700">
+                    ¿Necesitas ayuda? <a href="mailto:soporte@lovio.cl" class="text-lovio-600 font-medium hover:text-lovio-700">Contáctanos</a> 
+                    y te ayudaremos a encontrar lo que buscas.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <Footer />
+</BaseLayout>
