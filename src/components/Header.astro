@@ -20,13 +20,12 @@ const isActive = (path: string) => {
                 <img src="/lovio.svg" alt="Lovio" class="h-8 w-32 object-contain" />
             </a>
             
-            <div class="hidden lg:flex items-center gap-8">
-                <nav class="flex gap-8 items-center">
-                    <a href="/" class={`nav-link relative font-medium text-sm transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-lovio-500 after:transition-all hover:after:w-full ${isActive('/') ? 'text-lovio-600 after:w-full' : 'text-gray-800 hover:text-lovio-600'}`}>Inicio</a>
-                    <a href="/disenos" class={`nav-link relative font-medium text-sm transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-lovio-500 after:transition-all hover:after:w-full ${isActive('/disenos') ? 'text-lovio-600 after:w-full' : 'text-gray-800 hover:text-lovio-600'}`}>Diseños</a>
-                    <a href="#como-crear" class={`nav-link relative font-medium text-sm transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-lovio-500 after:transition-all hover:after:w-full ${isActive('#como-crear') ? 'text-lovio-600 after:w-full' : 'text-gray-800 hover:text-lovio-600'}`}>¿Cómo crear mi invitación?</a>
-                    <a href="/precios" class={`nav-link relative font-medium text-sm transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-lovio-500 after:transition-all hover:after:w-full ${isActive('/precios') ? 'text-lovio-600 after:w-full' : 'text-gray-800 hover:text-lovio-600'}`}>Precio</a>
-                    <a href="/faqs" class={`nav-link relative font-medium text-sm transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-lovio-500 after:transition-all hover:after:w-full ${isActive('/faqs') ? 'text-lovio-600 after:w-full' : 'text-gray-800 hover:text-lovio-600'}`}>FAQs</a>
+            <div class="hidden lg:flex items-center gap-12">
+                <nav class="flex gap-10 items-center">
+                    <a href="/" class={`nav-link relative font-semibold text-base transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-lovio-500 after:transition-all hover:after:w-full ${isActive('/') ? 'text-lovio-600 after:w-full' : 'text-gray-800 hover:text-lovio-600'}`}>Inicio</a>
+                    <a href="/disenos" class={`nav-link relative font-semibold text-base transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-lovio-500 after:transition-all hover:after:w-full ${isActive('/disenos') ? 'text-lovio-600 after:w-full' : 'text-gray-800 hover:text-lovio-600'}`}>Diseños</a>
+                    <a href="/precios" class={`nav-link relative font-semibold text-base transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-lovio-500 after:transition-all hover:after:w-full ${isActive('/precios') ? 'text-lovio-600 after:w-full' : 'text-gray-800 hover:text-lovio-600'}`}>Precio</a>
+                    <a href="/faqs" class={`nav-link relative font-semibold text-base transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-lovio-500 after:transition-all hover:after:w-full ${isActive('/faqs') ? 'text-lovio-600 after:w-full' : 'text-gray-800 hover:text-lovio-600'}`}>FAQs</a>
                 </nav>
                 
                 <!-- Separador -->
@@ -42,7 +41,7 @@ const isActive = (path: string) => {
                         Ingresar
                     </a>
                     
-                    <div class="flex items-center gap-2 px-3 py-2 bg-white border border-gray-300 rounded-full cursor-pointer hover:border-primary transition-colors">
+                    <div class="hidden flex items-center gap-2 px-3 py-2 bg-white border border-gray-300 rounded-full cursor-pointer hover:border-primary transition-colors">
                         <img src="https://flagcdn.com/w20/cl.png" alt="Chile" class="w-5 h-3 object-cover rounded-sm" />
                         <span class="text-sm text-gray-800 font-medium">Chile</span>
                         <ChevronDown size="12" class="text-gray-600" />
@@ -62,7 +61,6 @@ const isActive = (path: string) => {
             <div class="pt-3 grid gap-3">
                 <a href="/" class={`nav-link px-2 py-2 rounded-lg transition ${isActive('/') ? 'text-lovio-600 bg-rose-50' : 'text-gray-800 hover:text-lovio-600 hover:bg-rose-50'}`}>Inicio</a>
                 <a href="/disenos" class={`nav-link px-2 py-2 rounded-lg transition ${isActive('/disenos') ? 'text-lovio-600 bg-rose-50' : 'text-gray-800 hover:text-lovio-600 hover:bg-rose-50'}`}>Diseños</a>
-                <a href="#como-crear" class={`nav-link px-2 py-2 rounded-lg transition ${isActive('#como-crear') ? 'text-lovio-600 bg-rose-50' : 'text-gray-800 hover:text-lovio-600 hover:bg-rose-50'}`}>¿Cómo crear mi invitación?</a>
                 <a href="/precios" class={`nav-link px-2 py-2 rounded-lg transition ${isActive('/precios') ? 'text-lovio-600 bg-rose-50' : 'text-gray-800 hover:text-lovio-600 hover:bg-rose-50'}`}>Precio</a>
                 <a href="/faqs" class={`nav-link px-2 py-2 rounded-lg transition ${isActive('/faqs') ? 'text-lovio-600 bg-rose-50' : 'text-gray-800 hover:text-lovio-600 hover:bg-rose-50'}`}>FAQs</a>
                 <div class="flex items-center gap-3 pt-2">
