@@ -1,6 +1,16 @@
 ---
 // Componente Header
 import { User, ChevronDown } from 'lucide-astro';
+
+// Obtener la ruta actual
+const currentPath = Astro.url.pathname;
+
+// Función para determinar si un enlace está activo
+const isActive = (path: string) => {
+    if (path === '/' && currentPath === '/') return true;
+    if (path !== '/' && currentPath.startsWith(path)) return true;
+    return false;
+};
 ---
 
 <header class="bg-white shadow-lg fixed top-0 left-0 right-0 z-50">
@@ -10,22 +20,20 @@ import { User, ChevronDown } from 'lucide-astro';
                 <img src="/lovio.svg" alt="Lovio" class="h-8 w-32 object-contain" />
             </a>
             
-            <nav class="hidden lg:flex gap-8 items-center">
-                <a href="/disenos" class="relative text-gray-800 font-medium text-sm hover:text-lovio-600 transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-lovio-500 after:transition-all hover:after:w-full">Diseños</a>
-                <a href="#como-crear" class="relative text-gray-800 font-medium text-sm hover:text-lovio-600 transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-lovio-500 after:transition-all hover:after:w-full">¿Cómo crear mi invitación?</a>
-                <a href="#precios" class="relative text-gray-800 font-medium text-sm hover:text-lovio-600 transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-lovio-500 after:transition-all hover:after:w-full">Nuestros Precios</a>
-                <a href="/faqs" class="relative text-gray-800 font-medium text-sm hover:text-lovio-600 transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-lovio-500 after:transition-all hover:after:w-full">FAQs</a>
-            </nav>
-            
-            <div class="flex items-center gap-4">
-                <!-- Mobile hamburger on the right -->
-                <button id="menu-toggle" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 hover:border-primary text-gray-700">
-                    <span class="sr-only">Abrir menú</span>
-                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-                </button>
-
-                <!-- Desktop actions -->
-                <div class="hidden lg:flex items-center gap-4">
+            <div class="hidden lg:flex items-center gap-8">
+                <nav class="flex gap-8 items-center">
+                    <a href="/" class={`nav-link relative font-medium text-sm transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-lovio-500 after:transition-all hover:after:w-full ${isActive('/') ? 'text-lovio-600 after:w-full' : 'text-gray-800 hover:text-lovio-600'}`}>Inicio</a>
+                    <a href="/disenos" class={`nav-link relative font-medium text-sm transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-lovio-500 after:transition-all hover:after:w-full ${isActive('/disenos') ? 'text-lovio-600 after:w-full' : 'text-gray-800 hover:text-lovio-600'}`}>Diseños</a>
+                    <a href="#como-crear" class={`nav-link relative font-medium text-sm transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-lovio-500 after:transition-all hover:after:w-full ${isActive('#como-crear') ? 'text-lovio-600 after:w-full' : 'text-gray-800 hover:text-lovio-600'}`}>¿Cómo crear mi invitación?</a>
+                    <a href="/precios" class={`nav-link relative font-medium text-sm transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-lovio-500 after:transition-all hover:after:w-full ${isActive('/precios') ? 'text-lovio-600 after:w-full' : 'text-gray-800 hover:text-lovio-600'}`}>Precio</a>
+                    <a href="/faqs" class={`nav-link relative font-medium text-sm transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-lovio-500 after:transition-all hover:after:w-full ${isActive('/faqs') ? 'text-lovio-600 after:w-full' : 'text-gray-800 hover:text-lovio-600'}`}>FAQs</a>
+                </nav>
+                
+                <!-- Separador -->
+                <div class="w-px h-6 bg-gray-300"></div>
+                
+                <!-- Botones de acción -->
+                <div class="flex items-center gap-4">
                     <a href="https://app.lovio.cl/auth?mode=register" class="bg-primary text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-lovio-600 transition-colors">
                         Crear Invitación
                     </a>
@@ -41,15 +49,22 @@ import { User, ChevronDown } from 'lucide-astro';
                     </div>
                 </div>
             </div>
+            
+            <!-- Mobile hamburger -->
+            <button id="menu-toggle" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 hover:border-primary text-gray-700">
+                <span class="sr-only">Abrir menú</span>
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
         </div>
 
         <!-- Mobile menu -->
         <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-200 pb-4">
             <div class="pt-3 grid gap-3">
-                <a href="/disenos" class="px-2 py-2 rounded-lg text-gray-800 hover:text-lovio-600 hover:bg-rose-50 transition">Diseños</a>
-                <a href="#como-crear" class="px-2 py-2 rounded-lg text-gray-800 hover:text-lovio-600 hover:bg-rose-50 transition">¿Cómo crear mi invitación?</a>
-                <a href="#precios" class="px-2 py-2 rounded-lg text-gray-800 hover:text-lovio-600 hover:bg-rose-50 transition">Nuestros Precios</a>
-                <a href="/faqs" class="px-2 py-2 rounded-lg text-gray-800 hover:text-lovio-600 hover:bg-rose-50 transition">FAQs</a>
+                <a href="/" class={`nav-link px-2 py-2 rounded-lg transition ${isActive('/') ? 'text-lovio-600 bg-rose-50' : 'text-gray-800 hover:text-lovio-600 hover:bg-rose-50'}`}>Inicio</a>
+                <a href="/disenos" class={`nav-link px-2 py-2 rounded-lg transition ${isActive('/disenos') ? 'text-lovio-600 bg-rose-50' : 'text-gray-800 hover:text-lovio-600 hover:bg-rose-50'}`}>Diseños</a>
+                <a href="#como-crear" class={`nav-link px-2 py-2 rounded-lg transition ${isActive('#como-crear') ? 'text-lovio-600 bg-rose-50' : 'text-gray-800 hover:text-lovio-600 hover:bg-rose-50'}`}>¿Cómo crear mi invitación?</a>
+                <a href="/precios" class={`nav-link px-2 py-2 rounded-lg transition ${isActive('/precios') ? 'text-lovio-600 bg-rose-50' : 'text-gray-800 hover:text-lovio-600 hover:bg-rose-50'}`}>Precio</a>
+                <a href="/faqs" class={`nav-link px-2 py-2 rounded-lg transition ${isActive('/faqs') ? 'text-lovio-600 bg-rose-50' : 'text-gray-800 hover:text-lovio-600 hover:bg-rose-50'}`}>FAQs</a>
                 <div class="flex items-center gap-3 pt-2">
                     <a href="https://app.lovio.cl/auth?mode=register" class="flex-1 bg-primary text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-lovio-600 transition-colors text-center">Crear Invitación</a>
                     <a href="https://app.lovio.cl/auth" class="flex-1 bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-colors flex items-center justify-center gap-2">
@@ -62,18 +77,18 @@ import { User, ChevronDown } from 'lucide-astro';
     </div>
 </header>
 
-<script>
-    const btn = document.getElementById('menu-toggle');
-    const menu = document.getElementById('mobile-menu');
-    const icon = document.getElementById('menu-icon');
+    <script>
+        const btn = document.getElementById('menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
 
-    if (btn && menu && icon) {
-        btn.addEventListener('click', () => {
-            const isOpen = !menu.classList.contains('hidden');
-            menu.classList.toggle('hidden');
-            icon.innerHTML = isOpen
-                ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>'
-                : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>'
-        });
-    }
-</script>
+        if (btn && menu && icon) {
+            btn.addEventListener('click', () => {
+                const isOpen = !menu.classList.contains('hidden');
+                menu.classList.toggle('hidden');
+                icon.innerHTML = isOpen
+                    ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>'
+                    : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>'
+            });
+        }
+    </script>

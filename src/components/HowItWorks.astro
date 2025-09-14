@@ -12,7 +12,7 @@ import { UserPlus, FileText, Eye, Share2 } from 'lucide-astro';
 
         <!-- Tabs header -->
         <div id="how-tabs" class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
-            <button data-step="0" class="tab-btn group flex items-center gap-3 justify-center rounded-2xl border border-rose-200 bg-white px-4 py-3 shadow-sm hover:border-lovio-500 hover:bg-rose-50 focus:outline-none">
+            <button data-step="0" class="tab-btn group flex items-center gap-3 justify-center rounded-2xl border border-lovio-500 bg-rose-50 px-4 py-3 shadow-sm hover:border-lovio-500 hover:bg-rose-50 focus:outline-none">
                 <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-rose-100 ring-2 ring-rose-200">
                     <UserPlus size="18" class="text-lovio-500" />
                 </span>
@@ -135,7 +135,7 @@ import { UserPlus, FileText, Eye, Share2 } from 'lucide-astro';
         const tabs = document.querySelectorAll('#how-tabs .tab-btn');
         const panels = document.querySelectorAll('#how-panels .tab-panel');
         let active = 0;
-        function setActive(i){
+        function setActive(i: number){
             active = i;
             tabs.forEach((t,idx)=>{
                 t.classList.toggle('border-lovio-500', idx===i);

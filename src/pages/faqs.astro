@@ -185,15 +185,17 @@ import Footer from '../components/Footer.astro';
             const faqToggles = document.querySelectorAll('.faq-toggle');
             
             faqToggles.forEach(toggle => {
-                toggle.addEventListener('click', function() {
-                    const content = this.nextElementSibling;
-                    const icon = this.querySelector('.faq-icon');
+                toggle.addEventListener('click', function(this: HTMLElement) {
+                    const content = this.nextElementSibling as HTMLElement;
+                    const icon = this.querySelector('.faq-icon') as HTMLElement;
                     
                     // Toggle content visibility
-                    content.classList.toggle('hidden');
+                    content?.classList.toggle('hidden');
                     
                     // Rotate icon
-                    icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                    if (icon) {
+                        icon.style.transform = content?.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                    }
                 });
             });
         });
