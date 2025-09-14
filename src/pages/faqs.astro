@@ -1,0 +1,201 @@
+---
+import BaseLayout from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Preguntas Frecuentes - Lovio" description="Encuentra respuestas a las preguntas más comunes sobre nuestras invitaciones digitales de boda.">
+    <Header />
+    
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-rose-50 to-pink-100 py-16">
+            <div class="max-w-4xl mx-auto px-5 text-center">
+                <h1 class="font-serif text-4xl md:text-5xl text-gray-900 mb-6">
+                    Preguntas Frecuentes
+                </h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Encuentra respuestas a las preguntas más comunes sobre nuestras invitaciones digitales
+                </p>
+            </div>
+        </section>
+
+        <!-- FAQs Section -->
+        <section class="py-16">
+            <div class="max-w-4xl mx-auto px-5">
+                <div class="space-y-6">
+                    <!-- FAQ 1 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <h3 class="font-semibold text-gray-900 text-lg">¿Cómo funciona Lovio?</h3>
+                            <svg class="faq-icon w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4">
+                            <p class="text-gray-600 leading-relaxed">
+                                Lovio te permite crear invitaciones digitales hermosas en 4 simples pasos: 
+                                1) Crea tu cuenta, 2) Elige un diseño y completa tu información, 
+                                3) Visualiza tu invitación en tiempo real, 4) Publícala y compártela con tus invitados.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <h3 class="font-semibold text-gray-900 text-lg">¿Cuánto cuesta crear una invitación?</h3>
+                            <svg class="faq-icon w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4">
+                            <p class="text-gray-600 leading-relaxed">
+                                Nuestras invitaciones tienen un costo único de $39.990. No hay suscripciones mensuales, 
+                                pagas una sola vez y tienes acceso de por vida a tu invitación, incluyendo actualizaciones y soporte.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <h3 class="font-semibold text-gray-900 text-lg">¿Puedo personalizar mi invitación?</h3>
+                            <svg class="faq-icon w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4">
+                            <p class="text-gray-600 leading-relaxed">
+                                ¡Absolutamente! Puedes personalizar todos los detalles: nombres, fecha, hora, lugar, 
+                                código de vestimenta, mensaje personal, colores, y mucho más. Cada invitación es única y refleja tu estilo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <h3 class="font-semibold text-gray-900 text-lg">¿Cómo envío la invitación a mis invitados?</h3>
+                            <svg class="faq-icon w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4">
+                            <p class="text-gray-600 leading-relaxed">
+                                Una vez que publiques tu invitación, recibirás un enlace único que puedes compartir por WhatsApp, 
+                                email, redes sociales o cualquier medio que prefieras. Tus invitados podrán ver la invitación 
+                                desde cualquier dispositivo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <h3 class="font-semibold text-gray-900 text-lg">¿Puedo ver quién confirmó asistencia?</h3>
+                            <svg class="faq-icon w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4">
+                            <p class="text-gray-600 leading-relaxed">
+                                Sí, tienes acceso a un panel de control donde puedes ver en tiempo real quién ha confirmado 
+                                asistencia, quién no ha respondido, y gestionar tu lista de invitados de forma fácil y organizada.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <h3 class="font-semibold text-gray-900 text-lg">¿Qué métodos de pago aceptan?</h3>
+                            <svg class="faq-icon w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4">
+                            <p class="text-gray-600 leading-relaxed">
+                                Aceptamos todas las tarjetas de crédito y débito principales (Visa, Mastercard, American Express), 
+                                transferencias bancarias, y pagos a través de Webpay Plus. El pago es 100% seguro y procesado 
+                                por Transbank.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 7 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <h3 class="font-semibold text-gray-900 text-lg">¿Puedo cambiar mi invitación después de crearla?</h3>
+                            <svg class="faq-icon w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4">
+                            <p class="text-gray-600 leading-relaxed">
+                                Sí, puedes editar tu invitación en cualquier momento. Los cambios se actualizan automáticamente 
+                                y tus invitados verán siempre la versión más reciente. No hay límite en la cantidad de cambios que puedes hacer.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 8 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <h3 class="font-semibold text-gray-900 text-lg">¿Ofrecen soporte técnico?</h3>
+                            <svg class="faq-icon w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4">
+                            <p class="text-gray-600 leading-relaxed">
+                                ¡Por supuesto! Ofrecemos soporte técnico 24/7 por email y WhatsApp. Nuestro equipo está siempre 
+                                disponible para ayudarte con cualquier duda o problema que puedas tener.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="text-center mt-16">
+                    <h2 class="font-serif text-3xl text-gray-900 mb-4">
+                        ¿No encontraste tu respuesta?
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Contáctanos y te ayudaremos con cualquier duda que tengas
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="mailto:soporte@lovio.cl" class="inline-flex items-center bg-lovio-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-lovio-600 transition-colors">
+                            Enviar Email
+                        </a>
+                        <a href="https://wa.me/56912345678" class="inline-flex items-center bg-green-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-600 transition-colors">
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+
+    <script>
+        // FAQ Toggle Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('.faq-icon');
+                    
+                    // Toggle content visibility
+                    content.classList.toggle('hidden');
+                    
+                    // Rotate icon
+                    icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                });
+            });
+        });
+    </script>
+</BaseLayout>
