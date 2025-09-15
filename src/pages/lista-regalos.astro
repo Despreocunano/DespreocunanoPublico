@@ -1,0 +1,320 @@
+---
+import BaseLayout from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Lista de Regalos - Lovio" description="Lista de regalos incluida en tu invitación digital. Recibe el 100% del dinero directamente en tu cuenta.">
+    <Header />
+    
+    <!-- Hero Section -->
+    <section class="relative bg-white pt-24 pb-16 lg:pt-28 lg:pb-24">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    Lista de regalos incluida
+                </div>
+                
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl leading-tight text-gray-900 mb-6">
+                    Lista de regalos incluida en tu
+                    <br />
+                    <span class="text-lovio-500">invitación digital</span>
+                </h1>
+
+                <p class="text-gray-700 text-lg lg:text-xl mb-8 max-w-3xl mx-auto">
+                    Crea listas únicas con experiencias, deseos y regalos tradicionales. 
+                    <span class="font-semibold text-lovio-600">Recibe el 100% del dinero directamente en tu cuenta.</span>
+                </p>
+
+                <div class="flex items-center justify-center gap-6 flex-wrap">
+                    <a href="https://app.lovio.cl/auth?mode=register" class="bg-primary text-white px-6 py-3 rounded-full text-base font-semibold shadow-lg hover:bg-lovio-600 transition-colors">
+                        Crear mi invitación digital
+                    </a>
+                    <a href="#proceso" class="text-lovio-500 font-semibold underline decoration-2 underline-offset-4 hover:text-lovio-600">
+                        Ver el proceso
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-pink-100/60 to-transparent pointer-events-none"></div>
+    </section>
+
+    <!-- Beneficios Section -->
+    <section class="py-16 lg:py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl lg:text-4xl text-gray-900 mb-4">
+                    ¿Por qué elegir nuestra lista de regalos?
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Una característica adicional que viene incluida en tu invitación digital, sin costos extra
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-white rounded-2xl shadow-sm">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-xl text-gray-900 mb-3">100% para ti</h3>
+                    <p class="text-gray-600">Recibe el monto completo de cada regalo directamente en tu cuenta bancaria. Sin comisiones ocultas.</p>
+                </div>
+
+                <div class="text-center p-6 bg-white rounded-2xl shadow-sm">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-xl text-gray-900 mb-3">Libertad total</h3>
+                    <p class="text-gray-600">Agrega experiencias, viajes, deseos o regalos tradicionales. Tu imaginación es el límite.</p>
+                </div>
+
+                <div class="text-center p-6 bg-white rounded-2xl shadow-sm">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-xl text-gray-900 mb-3">Pagos seguros</h3>
+                    <p class="text-gray-600">Los invitados pagan solo un 10% de cargo por servicio. Transacciones seguras y transparentes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso Section -->
+    <section id="proceso" class="py-16 lg:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl lg:text-4xl text-gray-900 mb-4">
+                    Nuestro proceso
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Una experiencia sencilla y clara para que tú y tus invitados disfruten al máximo
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-lovio-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">1</div>
+                    <h3 class="font-semibold text-xl text-gray-900 mb-4">Crea tu lista personalizada</h3>
+                    <p class="text-gray-600">Agrega experiencias, viajes, electrodomésticos, muebles o cualquier deseo que tengas. No hay límites en lo que puedes incluir.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-lovio-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">2</div>
+                    <h3 class="font-semibold text-xl text-gray-900 mb-4">Comparte con tus invitados</h3>
+                    <p class="text-gray-600">Integra tu lista en tu invitación digital o compártela independientemente. Los invitados pueden ver y pagar por los regalos desde cualquier dispositivo.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-lovio-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">3</div>
+                    <h3 class="font-semibold text-xl text-gray-900 mb-4">Recibe el dinero completo</h3>
+                    <p class="text-gray-600">Cada regalo pagado se transfiere directamente a tu cuenta bancaria. Recibes el 100% del monto solicitado.</p>
+                </div>
+            </div>
+
+            <!-- Sistema de pagos transparente -->
+            <div class="mt-16 bg-gray-50 rounded-2xl p-8">
+                <h3 class="font-semibold text-xl text-gray-900 text-center mb-6">Sistema de pagos transparente</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="bg-white rounded-xl p-6">
+                        <div class="text-2xl font-bold text-gray-900 mb-2">$100</div>
+                        <p class="text-gray-600">Regalo solicitado</p>
+                    </div>
+                    <div class="bg-green-50 rounded-xl p-6 border-2 border-green-200">
+                        <div class="text-2xl font-bold text-green-600 mb-2">$100</div>
+                        <p class="text-gray-600">Lo que reciben los novios</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6">
+                        <div class="text-2xl font-bold text-gray-900 mb-2">$110</div>
+                        <p class="text-gray-600">Costo para invitados</p>
+                    </div>
+                </div>
+                <p class="text-center text-gray-600 mt-4">Los invitados solo pagan un 10% adicional de cargo por servicio</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tipos de regalos Section -->
+    <section class="py-16 lg:py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl lg:text-4xl text-gray-900 mb-4">
+                    Incluye todo tipo de regalos
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Desde experiencias especiales hasta regalos clásicos, tu lista puede contener todo lo que imagines
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl p-6 text-center">
+                    <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg text-gray-900 mb-2">Experiencias</h3>
+                    <p class="text-gray-600 text-sm">Viajes, cenas románticas, spa, conciertos, actividades de aventura</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 text-center">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg text-gray-900 mb-2">Hogar</h3>
+                    <p class="text-gray-600 text-sm">Muebles, electrodomésticos, decoración, vajilla, ropa de cama</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 text-center">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg text-gray-900 mb-2">Deseos</h3>
+                    <p class="text-gray-600 text-sm">Contribuciones para luna de miel, fondo para casa, estudios, proyectos</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 text-center">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg text-gray-900 mb-2">Tradicionales</h3>
+                    <p class="text-gray-600 text-sm">Regalos físicos específicos, artículos de boda, accesorios</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ventajas Section -->
+    <section class="py-16 lg:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl lg:text-4xl text-gray-900 mb-4">
+                    Ventajas sobre las listas convencionales
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Descubre por qué nuestra lista de regalos integrada es la opción más inteligente
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Lovio -->
+                <div class="bg-lovio-50 rounded-2xl p-8 border-2 border-lovio-200">
+                    <h3 class="font-semibold text-xl text-gray-900 mb-6 text-center">Lista de regalos incluida en tu invitación digital</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Recibes el 100% del dinero solicitado</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Agregas cualquier tipo de regalo o experiencia</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Pagos seguros y transparentes</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Transferencias directas a tu cuenta</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Seguimiento en tiempo real</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Integrada con tu invitación digital</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Listas convencionales -->
+                <div class="bg-gray-100 rounded-2xl p-8">
+                    <h3 class="font-semibold text-xl text-gray-900 mb-6 text-center">Listas convencionales</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Comisiones del 15-25% por la tienda</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Limitada a productos de la tienda</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Sin opción de regalos en efectivo</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Proceso de canje complicado</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Sin seguimiento de regalos</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Separada de la invitación</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 lg:py-20 bg-lovio-500">
+        <div class="max-w-4xl mx-auto px-5 text-center">
+            <h2 class="font-serif text-3xl lg:text-4xl text-white mb-6">
+                ¿Listo para crear tu invitación digital con lista de regalos?
+            </h2>
+            <p class="text-lovio-100 text-lg mb-8 max-w-2xl mx-auto">
+                Únete a cientos de parejas que ya disfrutan de su invitación digital completa con lista de regalos integrada
+            </p>
+            <a href="https://app.lovio.cl/auth?mode=register" class="inline-block bg-white text-lovio-500 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg">
+                Crear mi invitación digital
+            </a>
+        </div>
+    </section>
+
+    <Footer />
+</BaseLayout>

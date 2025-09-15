@@ -24,6 +24,7 @@ const isActive = (path: string) => {
                 <nav class="flex gap-10 items-center">
                     <a href="/" class={`nav-link relative font-semibold text-base transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-lovio-500 after:transition-all hover:after:w-full ${isActive('/') ? 'text-lovio-600 after:w-full' : 'text-gray-800 hover:text-lovio-600'}`}>Inicio</a>
                     <a href="/disenos" class={`nav-link relative font-semibold text-base transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-lovio-500 after:transition-all hover:after:w-full ${isActive('/disenos') ? 'text-lovio-600 after:w-full' : 'text-gray-800 hover:text-lovio-600'}`}>Diseños</a>
+                    <a href="/lista-regalos" class={`nav-link relative font-semibold text-base transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-lovio-500 after:transition-all hover:after:w-full ${isActive('/lista-regalos') ? 'text-lovio-600 after:w-full' : 'text-gray-800 hover:text-lovio-600'}`}>Lista de Regalos</a>
                     <a href="/precios" class={`nav-link relative font-semibold text-base transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-lovio-500 after:transition-all hover:after:w-full ${isActive('/precios') ? 'text-lovio-600 after:w-full' : 'text-gray-800 hover:text-lovio-600'}`}>Precio</a>
                     <a href="/faqs" class={`nav-link relative font-semibold text-base transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-lovio-500 after:transition-all hover:after:w-full ${isActive('/faqs') ? 'text-lovio-600 after:w-full' : 'text-gray-800 hover:text-lovio-600'}`}>FAQs</a>
                 </nav>
@@ -58,11 +59,12 @@ const isActive = (path: string) => {
 
         <!-- Mobile menu -->
         <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-200 pb-4">
-            <div class="pt-3 grid gap-3">
-                <a href="/" class={`nav-link px-2 py-2 rounded-lg transition ${isActive('/') ? 'text-lovio-600 bg-rose-50' : 'text-gray-800 hover:text-lovio-600 hover:bg-rose-50'}`}>Inicio</a>
-                <a href="/disenos" class={`nav-link px-2 py-2 rounded-lg transition ${isActive('/disenos') ? 'text-lovio-600 bg-rose-50' : 'text-gray-800 hover:text-lovio-600 hover:bg-rose-50'}`}>Diseños</a>
-                <a href="/precios" class={`nav-link px-2 py-2 rounded-lg transition ${isActive('/precios') ? 'text-lovio-600 bg-rose-50' : 'text-gray-800 hover:text-lovio-600 hover:bg-rose-50'}`}>Precio</a>
-                <a href="/faqs" class={`nav-link px-2 py-2 rounded-lg transition ${isActive('/faqs') ? 'text-lovio-600 bg-rose-50' : 'text-gray-800 hover:text-lovio-600 hover:bg-rose-50'}`}>FAQs</a>
+                    <div class="pt-3 grid gap-3">
+                        <a href="/" class={`nav-link px-2 py-2 rounded-lg transition ${isActive('/') ? 'text-lovio-600 bg-rose-50' : 'text-gray-800 hover:text-lovio-600 hover:bg-rose-50'}`}>Inicio</a>
+                        <a href="/disenos" class={`nav-link px-2 py-2 rounded-lg transition ${isActive('/disenos') ? 'text-lovio-600 bg-rose-50' : 'text-gray-800 hover:text-lovio-600 hover:bg-rose-50'}`}>Diseños</a>
+                        <a href="/lista-regalos" class={`nav-link px-2 py-2 rounded-lg transition ${isActive('/lista-regalos') ? 'text-lovio-600 bg-rose-50' : 'text-gray-800 hover:text-lovio-600 hover:bg-rose-50'}`}>Lista de Regalos</a>
+                        <a href="/precios" class={`nav-link px-2 py-2 rounded-lg transition ${isActive('/precios') ? 'text-lovio-600 bg-rose-50' : 'text-gray-800 hover:text-lovio-600 hover:bg-rose-50'}`}>Precio</a>
+                        <a href="/faqs" class={`nav-link px-2 py-2 rounded-lg transition ${isActive('/faqs') ? 'text-lovio-600 bg-rose-50' : 'text-gray-800 hover:text-lovio-600 hover:bg-rose-50'}`}>FAQs</a>
                 <div class="flex items-center gap-3 pt-2">
                     <a href="https://app.lovio.cl/auth?mode=register" class="flex-1 bg-primary text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-lovio-600 transition-colors text-center">Crear Invitación</a>
                     <a href="https://app.lovio.cl/auth" class="flex-1 bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-colors flex items-center justify-center gap-2">

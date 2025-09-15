@@ -7,7 +7,7 @@ interface Props {
 const { title = 'Lovio', description = 'Gestión de tu boda: invitación digital, RSVP, mesas, música y más.' } = Astro.props as Props;
 ---
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,8 +26,8 @@ const { title = 'Lovio', description = 'Gestión de tu boda: invitación digital
       gtag('js', new Date());
       gtag('config', 'G-62Q6NTVSCC');
     </script>
-</head>
-<body class="bg-gray-50">
-    <slot />
-</body>
+        </head>
+        <body class="bg-gray-50">
+            <slot />
+        </body>
 </html>
