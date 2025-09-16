@@ -70,6 +70,17 @@ const diseños = [
         categoria: 'Glamour',
         emoji: '🎬',
         gradiente: 'from-rose-100 to-pink-200'
+    },
+    {
+        id: 'passport',
+        nombre: 'Passport',
+        descripcion: 'Aventura y viajes alrededor del mundo',
+        descripcionLarga: 'Perfecto para parejas viajeras y bodas con temática internacional',
+        slug: 'passport',
+        preview: 'https://files.lovio.cl/previews/passport.jpg',
+        categoria: 'Aventura',
+        emoji: '✈️',
+        gradiente: 'from-blue-100 to-cyan-200'
     }
 ];
 
@@ -97,7 +108,7 @@ const categorias = [...new Set(diseños.map(d => d.categoria))];
         <!-- Grid de Diseños -->
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-5">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                     {diseños.map(diseño => (
                         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
                             <div class="aspect-[3/4] bg-white relative overflow-hidden p-4">
@@ -122,7 +133,7 @@ const categorias = [...new Set(diseños.map(d => d.categoria))];
                             </div>
                             <div class="p-6 text-center">
                                 <h3 class="font-semibold text-gray-900 mb-2">{diseño.nombre}</h3>
-                                <a href={`/disenos/${diseño.slug}`} class="inline-flex items-center text-lovio-500 font-medium hover:text-lovio-600 transition-colors">
+                                <a href={`/disenos/${diseño.slug}`} target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-lovio-500 font-medium hover:text-lovio-600 transition-colors">
                                     Ver diseño →
                                 </a>
                             </div>
@@ -133,10 +144,10 @@ const categorias = [...new Set(diseños.map(d => d.categoria))];
                 <!-- CTA Section -->
                 <div class="text-center mt-16">
                     <h2 class="font-serif text-3xl text-gray-900 mb-4">
-                        ¿No encuentras lo que buscas?
+                        ¿Listo para crear tu invitación?
                     </h2>
                     <p class="text-lg text-gray-600 mb-8">
-                        Crea tu diseño personalizado con nuestra herramienta de diseño
+                        Elige tu diseño favorito y personaliza todos los detalles de tu boda
                     </p>
                     <a href="https://app.lovio.cl/auth?mode=register" class="inline-flex items-center bg-lovio-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-lovio-600 transition-colors">
                         Crear Mi Invitación
